@@ -28,26 +28,26 @@ export default function Home() {
 
   const cards = [
     {
-      name: 'Pepperoni Pizza',
-      freshness: 'Fresh for 3 more days',
+      name: 'Top Supporters',
+      freshness: 'Celebrate those who back you the most',
       count: 4,
       gradient: 'from-green-300 to-green-400',
     },
     {
-      name: 'Hawaiian Pizza',
-      freshness: 'Fresh for 3 more days',
+      name: 'Trending Campaigns',
+      freshness: 'Quick insights into your hottest moments',
       count: 2,
       gradient: 'from-yellow-200 to-yellow-300',
     },
     {
-      name: 'Margherita Pizza',
-      freshness: 'Fresh for 8 more days',
+      name: 'Performance Analytics',
+      freshness: 'Long-term trends to keep you growin',
       count: 2,
       gradient: 'from-pink-200 to-pink-300',
     },
     {
-      name: 'Veggie Pizza',
-      freshness: 'Fresh for 14 more days',
+      name: 'Future Planning',
+      freshness: 'Stay ahead with upcoming milestones',
       count: 1,
       gradient: 'from-orange-200 to-orange-300',
     },
@@ -67,8 +67,7 @@ export default function Home() {
           PIZZA
         </h1>
         <p className="mt-4 text-grey-200 text-base max-w-sm md:max-w-md lg:max-w-lg mx-auto">
-          Accept support. Start a membership. Setup a shop. It&apos;s easier than you
-          think.
+          Easily accept tips, grow your audience and track your success effortlessly!
         </p>
 
         {/* Get Started Button */}
@@ -114,28 +113,27 @@ export default function Home() {
         {/* Large Background Text */}
         <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
           <span className="font-bold text-green-700 uppercase leading-none text-[15vw] md:text-[10vw] tracking-tighter">
-            Bite
+            SLICE
           </span>
           <span className="font-bold text-green-700 uppercase leading-none text-[15vw] md:text-[10vw] tracking-tighter">
-            Into
+            INTO
           </span>
           <span className="font-bold text-green-700 uppercase leading-none text-[15vw] md:text-[10vw] tracking-tighter">
-            Good
+            SUPPORT
           </span>
         </div>
 
         {/* Pizza Emoji (Centered in front, very large) */}
         <div className="relative z-10">
-          <span className="text-[20vw] md:text-[15vw] block">🍕</span>
+          <span className="text-[40vw] md:text-[15vw] block">🍕</span>
         </div>
 
         {/* Card 1 (upper-left) */}
         <div className="absolute top-[30%] left-[15%] z-20">
           <div className="border border-black bg-transparent p-4 text-black max-w-[150px] text-sm leading-snug">
-            <h3 className="font-bold uppercase mb-2">No Bad Stuff</h3>
+            <h3 className="font-bold uppercase mb-2">Every Slice counts</h3>
             <p>
-              Our products are pesticide-free, which is better for your plate
-              and the planet.
+            Start receiving tips, build memberships, and share your story
             </p>
           </div>
         </div>
@@ -143,10 +141,9 @@ export default function Home() {
         {/* Card 2 (lower-right) */}
         <div className="absolute bottom-[30%] right-[15%] z-20">
           <div className="border border-black bg-transparent p-4 text-black max-w-[150px] text-sm leading-snug">
-            <h3 className="font-bold uppercase mb-2">100% Traceable</h3>
+            <h3 className="font-bold uppercase mb-2">No Extra Fees</h3>
             <p>
-              Our produce gets tracked from sweet little seed to sweet lucky
-              shelf.
+            Every slice of support goes directly to you. Enjoy hassle-free payments and peace of mind.
             </p>
           </div>
         </div>
@@ -157,11 +154,10 @@ export default function Home() {
         <div className="max-w-7xl w-full flex flex-col md:flex-col items-center justify-center mx-auto gap-8">
           <div className="md:w-1/2 flex flex-col justify-center items-center">
             <h1 className="text-white font-bold text-3xl md:text-7xl leading-tight text-center mb-4">
-              Don&apos;t let your food go to waste.
+              Every Slice Counts!
             </h1>
             <p className="text-green-400 text-base md:text-base text-center">
-              Kiff tracks your food&apos;s state and orders it by priority, so
-              you will <br /> know what to eat at a glance.
+            Someone once spent 10,000 BTC on pizza. Now we&apos;re making sure your pizzas come with a side of HODL!
             </p>
           </div>
           {/* Left side: Cards grid */}
@@ -204,14 +200,14 @@ export default function Home() {
             <Link href="/" className="text-sm font-semibold hover:underline">
               Home
             </Link>
-            <Link href="/shop" className="text-sm font-semibold hover:underline">
+            <Link href="/dashboard/shop" className="text-sm font-semibold hover:underline">
               Shop
             </Link>
             <Link
-              href="/features"
+              href="/dashboard/supporters"
               className="text-sm font-semibold hover:underline"
             >
-              Features
+              Supporters
             </Link>
           </div>
 
@@ -219,7 +215,7 @@ export default function Home() {
           <div className="flex items-center space-x-4 mt-2 md:mt-0">
             {/* Twitter (X) Icon */}
             <a
-              href="https://twitter.com"
+              href="#"
               aria-label="Twitter"
               target="_blank"
               rel="noopener noreferrer"
@@ -243,7 +239,7 @@ export default function Home() {
 
             {/* Mail Icon */}
             <a
-              href="mailto:support@example.com"
+              href="#"
               aria-label="Mail"
               className="inline-flex items-center justify-center w-6 h-6 text-black hover:text-gray-800 transition-colors"
             >
