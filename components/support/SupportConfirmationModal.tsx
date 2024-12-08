@@ -8,7 +8,6 @@ import type { User } from "@/types/user";
 interface SupportConfirmationModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onConfirm: () => void;
   amount: number;
   name: string;
   message: string;
@@ -18,7 +17,6 @@ interface SupportConfirmationModalProps {
 export default function SupportConfirmationModal({
   isOpen,
   onClose,
-  onConfirm,
   amount,
   name,
   message,

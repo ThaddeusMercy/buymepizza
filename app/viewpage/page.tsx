@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import ProfileLinks from "@/components/profile/ProfileLinks";
 import SupportForm from "@/components/support/SupportForm";
 import { useWalletUser } from "@/hooks/useWalletUser";
+import type { User } from "@/types/user";
 
 export default function ViewPage() {
   const { user } = useWalletUser();
@@ -55,7 +56,7 @@ export default function ViewPage() {
 
           {/* Right Column - Support Form */}
           <div>
-            <SupportForm />
+            <SupportForm user={user as User}/>
           </div>
         </div>
       </div>

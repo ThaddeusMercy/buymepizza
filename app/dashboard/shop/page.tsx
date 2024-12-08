@@ -22,7 +22,7 @@ export default function Shop() {
 
         <h2 className="text-3xl font-bold mb-4">Shop Coming Soon!</h2>
         <p className="text-gray-600 max-w-lg mx-auto mb-8">
-          We're working hard to bring you an amazing shopping experience. Soon you'll be able to sell your merchandise, digital products, and more!
+          We&apos;re working hard to bring you an amazing shopping experience. Soon you&apos;ll be able to sell your merchandise, digital products, and more!
         </p>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
@@ -57,7 +57,7 @@ export default function Shop() {
           whileTap={{ scale: 0.95 }}
           className="mt-8 bg-pizza-red text-white px-8 py-3 rounded-full font-bold hover:shadow-lg transition-all"
         >
-          Notify me when it's ready
+          Notify me when it&apos;s ready
         </motion.button>
       </motion.div>
     </div>

@@ -5,7 +5,7 @@ import { BigNumber } from 'bignumber.js';
 import { useBalance } from 'wagmi';
 
 interface WalletBalanceProps {
-  address?: string;
+  address?: `0x${string}`;
   symbol?: string;
 }
 

@@ -4,7 +4,7 @@ import { Skeleton } from '@/components/ui/skeleton';
 import { useEnsName } from 'wagmi';
 
 interface WalletNameProps {
-  address?: string;
+  address?: `0x${string}`;
 }
 
 export function WalletName({ address }: WalletNameProps) {

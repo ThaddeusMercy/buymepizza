@@ -18,7 +18,7 @@ export function useWalletUser() {
         
         if (!existingUser) {
           await createUser(address, {
-            username: '', // Will be set later during onboarding
+            username: '',
             bio: '',
             socials: {
               twitter: '',
@@ -29,7 +29,8 @@ export function useWalletUser() {
             images: {
               bannerImage: '',
               profileImage: ''
-            }
+            },
+            address: ''
           });
         }
       } catch (error) {

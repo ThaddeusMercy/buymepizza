@@ -21,11 +21,6 @@ export default function SupportForm({ user }: { user: User }) {
     }
   };
 
-  const handleConfirmSupport = () => {
-    // Handle the actual support transaction here
-    console.log("Support confirmed:", { amount, name, message });
-    setIsModalOpen(false);
-  };
 
   const getSupportButtonText = () => {
     if (!amount) return "Support";
@@ -93,7 +88,6 @@ export default function SupportForm({ user }: { user: User }) {
         user={user}
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
-        onConfirm={handleConfirmSupport}
         amount={amount || 0}
         name={name}
         message={message}

@@ -44,7 +44,7 @@ export function useSettingsForm() {
     if (field === 'username') {
       const validation = validateUsername(value, user?.username);
       if (!validation.isValid) {
-        setError(validation.error);
+        setError(validation.error || null);
         return;
       }
       setError(null);
@@ -73,7 +73,7 @@ export function useSettingsForm() {
       
       const validation = validateUsername(formData.username || '', user?.username);
       if (!validation.isValid) {
-        setError(validation.error);
+        setError(validation.error || null);
         return false;
       }
 

@@ -3,7 +3,6 @@
 import { useAppKit } from '@reown/appkit/react';
 import { Wallet } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useAccount } from 'wagmi';
 import { useIsMounted } from '@/hooks/useIsMounted';
 import { WalletAvatar } from './wallet/wallet-avatar';
 import { WalletName } from './wallet/wallet-name';

@@ -72,6 +72,7 @@ export default function Username() {
         setError('Username is already taken');
       }
     } catch (err) {
+      console.log(err);
       setError('Error checking username availability');
       setIsAvailable(false);
     } finally {
@@ -88,6 +89,7 @@ export default function Username() {
       router.push('/dashboard');
     } catch (err) {
       setError('Error updating username. Please try again.');
+      console.log(err);
     }
   };
 

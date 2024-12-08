@@ -77,7 +77,7 @@ export default function Dashboard() {
           <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <Heart className="w-6 h-6 text-gray-400" />
           </div>
-          <h3 className="text-xl font-bold mb-2">You don't have any supporters yet</h3>
+          <h3 className="text-xl font-bold mb-2">You don&apos;t have any supporters yet</h3>
           <p className="text-gray-600">Share your page with your audience to get started.</p>
         </div>
       </div>
