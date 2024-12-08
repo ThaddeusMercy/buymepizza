@@ -6,8 +6,10 @@ import { Pizza } from "lucide-react";
 import PizzaAmountSelector from "./PizzaAmountSelector";
 import PizzaButton from "@/components/ui/PizzaButton";
 import SupportConfirmationModal from "./SupportConfirmationModal";
+import type { User } from "@/types/user";
 
-export default function SupportForm() {
+
+export default function SupportForm({ user }: { user: User }) {
   const [amount, setAmount] = useState<number | null>(null);
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
@@ -88,6 +90,7 @@ export default function SupportForm() {
       </motion.div>
 
       <SupportConfirmationModal
+        user={user}
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         onConfirm={handleConfirmSupport}

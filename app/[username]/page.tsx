@@ -110,7 +110,7 @@ export default function UserPage({ params }: UserPageProps) {
 
           {/* Right Column - Support Form */}
           <div>
-            <SupportForm />
+            <SupportForm user={user} />
           </div>
         </div>
       </div>

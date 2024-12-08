@@ -1,11 +1,10 @@
 "use client";
 
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Pizza } from "lucide-react";
+import { Pizza, Loader2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import dynamic from "next/dynamic"
-
+import type { User } from "@/types/user";
 interface SupportConfirmationModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -13,6 +12,7 @@ interface SupportConfirmationModalProps {
   amount: number;
   name: string;
   message: string;
+  user: User;
 }
 
 export default function SupportConfirmationModal({
@@ -21,9 +21,11 @@ export default function SupportConfirmationModal({
   onConfirm,
   amount,
   name,
-  message
+  message,
+  user
 }: SupportConfirmationModalProps) {
   const [showPayment, setShowPayment] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleConfirm = () => {
     setShowPayment(true);
@@ -32,6 +34,20 @@ export default function SupportConfirmationModal({
   const handleClose = () => {
     setShowPayment(false);
     onClose();
+  };
+
+  const handlePayment = async () => {
+    setIsLoading(true);
+    const data = {
+      user,
+      amount,
+      name,
+      message,
+      timestamp: new Date().toISOString()
+    };
+
+    const encodedData = encodeURIComponent(JSON.stringify(data));
+    window.location.href = `https://pay.buymepizza.xyz?data=${encodedData}`;
   };
 
   return (
@@ -114,6 +130,21 @@ export default function SupportConfirmationModal({
                   Secure payment powered by Request Network
                 </p>
               </div>
+
+              <button
+                onClick={handlePayment}
+                disabled={isLoading}
+                className="w-full px-6 py-2 bg-pizza-red text-white rounded-full hover:bg-opacity-90 transition-colors flex items-center justify-center gap-2"
+              >
+                {isLoading ? (
+                  <>
+                    <Loader2 className="w-5 h-5 animate-spin" />
+                    Processing...
+                  </>
+                ) : (
+                  "Complete Payment"
+                )}
+              </button>
             </motion.div>
           )}
         </AnimatePresence>
