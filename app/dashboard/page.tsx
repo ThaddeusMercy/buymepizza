@@ -39,7 +39,7 @@ export default function Dashboard() {
           whileTap={{ scale: 0.95 }}
           className="bg-gray-900 text-white px-6 py-2 rounded-full font-medium"
         >
-          Share page
+          Share profile
         </motion.button>
       </div>
 

@@ -1,5 +1,5 @@
 "use client";
-
+import { useWalletUser } from '@/hooks/useWalletUser';
 import {
   Home,
   Eye,
@@ -9,17 +9,22 @@ import {
 } from "lucide-react";
 import { useRouter, usePathname } from "next/navigation";
 
-const menuItems = [
-  { icon: Home, label: "Home", href: "/dashboard" },
-  { icon: Eye, label: "View page", href: "/viewpage" },
-  { icon: Settings, label: "Settings", href: "/dashboard/settings" },
-  { icon: Heart, label: "Supporters", href: "/dashboard/supporters" },
-  { icon: ShoppingBag, label: "Shop", href: "/dashboard/shop" },
-];
-
 export default function Sidebar() {
   const router = useRouter();
   const pathname = usePathname();
+  const { user, loading } = useWalletUser(); // Move hook call inside the component
+
+  if (loading) {
+    return null;
+  }
+
+  const menuItems = [
+    { icon: Home, label: "Home", href: "/dashboard" },
+    { icon: Eye, label: "View page", href: `/${user?.username}` },
+    { icon: Settings, label: "Settings", href: "/dashboard/settings" },
+    { icon: Heart, label: "Supporters", href: "/dashboard/supporters" },
+    { icon: ShoppingBag, label: "Shop", href: "/dashboard/shop" },
+  ];
 
   return (
     <div className="w-64 bg-gray-50 h-screen fixed left-0 top-20 border-r border-gray-200 pt-4">
